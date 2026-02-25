@@ -1,10 +1,10 @@
-import Header from "./Header"
+import Banner from "../Homepagedetials/Banner"
 
 
 function Home() {
   return (
     <>
-<h1>Home</h1>
+<Banner/>
     </>
   )
 }

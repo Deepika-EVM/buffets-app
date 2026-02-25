@@ -1,0 +1,317 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header container */
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fd5d01;
+  cursor: pointer;
+}
+
+/* Navigation */
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav ul li.owner-section {
+  font-weight: bold;
+  color: #ff6600;
+  margin-left: 30px;
+}
+
+/* Links */
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #fd5d01;
+}
+
+/* Hamburger menu - hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fd5d01;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger open state */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+/* Aboutus css */
+
+/* ===== Hero Section ===== */
+.about-hero {
+  background: linear-gradient(135deg, #fd5d01, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about-hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* ===== Sections ===== */
+.about-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.about-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-section h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #fd5d01;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  border-radius: 2px;
+}
+
+/* ===== Cards Section ===== */
+.about-cards {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  flex: 1;
+  min-width: 280px;
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h3 {
+  color: #fd5d01;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.about-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===== Contact Section ===== */
+.about-section p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* contact us css */
+/* ===== Main Container ===== */
+.contact-container {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
+}
+
+/* ===== Hero Section ===== */
+.contact-hero {
+  background: linear-gradient(135deg, #fd5d01, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.contact-hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* ===== Content Section ===== */
+.contact-content {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ===== Contact Info ===== */
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* ===== Contact Form ===== */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #fd5d01;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #fd5d01;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+
+@media screen and (max-width: 768px) {
+      .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-hero h1 {
+    font-size: 30px;
+  }
+      .about-hero h1 {
+    font-size: 30px;
+  }
+
+  .about-cards {
+    flex-direction: column;
+  }
+  .nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    gap: 15px;
+    display: none;
+  }
+
+  .nav.open ul {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
