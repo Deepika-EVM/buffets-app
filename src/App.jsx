@@ -9,6 +9,7 @@ import ContactUs from './Headerdetials/ContactUs'
 import Account from './Headerdetials/Account'
 import Aboutus from "./Headerdetials/Aboutus";
 import Header from "./Headerdetials/Header";
+import Footer from "./Headerdetials/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/accountpage" element={<Account />} />
       </Routes>
+      <Footer/>
     </Router>
   )
 }

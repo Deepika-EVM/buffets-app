@@ -277,7 +277,31 @@
   background: #0056b3;
 }
 
+/* Account page */
+.account-container {
+  width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
 
+.account-form input,
+.account-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.account-form button {
+  width: 100%;
+  padding: 10px;
+  background: orange;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 @media screen and (max-width: 768px) {
       .contact-content {
     flex-direction: column;

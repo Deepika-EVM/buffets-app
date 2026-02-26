@@ -6,7 +6,7 @@ const Banner = () => {
   const [offerType, setOfferType] = useState("");
   const [priceRange, setPriceRange] = useState("");
   const [category, setCategory] = useState("");
-  const [results, setResults] = useState([]);
+;
 
   const offers = [
     {
@@ -61,30 +61,25 @@ const Banner = () => {
     },
   ];
 
-  const handleSearch = () => {
-    const filtered = offers.filter((item) => {
-      const nameMatch = searchTerm
-        ? item.name.toLowerCase().includes(searchTerm.toLowerCase())
-        : true;
+const filteredOffers = offers.filter((item) => {
+  const nameMatch = searchTerm
+    ? item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    : true;
 
-      const typeMatch = offerType ? item.type === offerType : true;
+  const typeMatch = offerType ? item.type === offerType : true;
 
-      const categoryMatch = category ? item.category === category : true;
+  const categoryMatch = category ? item.category === category : true;
 
-      const priceMatch = priceRange
-        ? priceRange === "0-199"
-          ? item.price <= 199
-          : priceRange === "200-399"
-          ? item.price >= 200 && item.price <= 399
-          : item.price >= 400
-        : true;
+  const priceMatch = priceRange
+    ? priceRange === "0-199"
+      ? item.price <= 199
+      : priceRange === "200-399"
+      ? item.price >= 200 && item.price <= 399
+      : item.price >= 400
+    : true;
 
-      return nameMatch && typeMatch && categoryMatch && priceMatch;
-    });
-
-    setResults(filtered);
-  };
-
+  return nameMatch && typeMatch && categoryMatch && priceMatch;
+});
   return (
     <div
       className="banner"
@@ -132,26 +127,28 @@ const Banner = () => {
             <option value="Non-Veg">Non-Veg</option>
           </select>
 
-          <button onClick={handleSearch}>Search</button>
         </div>
       </div>
 <h1>All Offers & Combo</h1>
-{results.length > 0 && (
-  <div className="search-results">
-    {results.map((item) => (
-      <div key={item.id} className="result-card">
-        <img className="search-results-image" src={item.image} alt={item.name} />
-        <div className="card-content">
-          <h3>{item.name}</h3>
-          <p className="search-results-price">Price: ₹{item.price}</p>
-          <p className="search-results-Offer">Offer: {item.type}</p>
-          <p className="search-results-items">Items: {item.items}+</p>
-          <p className="search-results-Category">Category: {item.category || "N/A"}</p>
-        </div>
+
+<div className="search-results">
+  {filteredOffers.map((item) => (
+    <div key={item.id} className="result-card">
+      <img
+        className="search-results-image"
+        src={item.image}
+        alt={item.name}
+      />
+      <div className="card-content">
+        <h3>{item.name}</h3>
+        <p>Price: ₹{item.price}</p>
+        <p>Offer: {item.type}</p>
+        <p>Items: {item.items}+</p>
+        <p>Category: {item.category}</p>
       </div>
-    ))}
-  </div>
-)}
+    </div>
+  ))}
+</div>
     </div>
   );
 };
